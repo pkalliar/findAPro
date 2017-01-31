@@ -11,8 +11,7 @@
 			((ObjectNode) msgId)
 					.put("uri", uri)
 					.put("result", result.getResponse().getStatus())
-					.put("reason", result.getResponse().getReason())
-					.set("msgId", msgId);
+					.put("reason", result.getResponse().getReason()));
 			coord.tell(msgId, meSender);
         });
 	}
